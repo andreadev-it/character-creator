@@ -8,6 +8,7 @@
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +25,53 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background-color: hsl(0deg, 0%, 80%);
+}
+
+.characterWrapper svg {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 65%;
+  min-height: 500px;
+  width: 500px;
 }
 
 .controlColumn {
+  isolation: isolate;
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 720px) {
+
+  .header {
+    width: 100%;
+  }
+
+  .controlColumn {
+    position: relative;
+    width: 100%;
+    top: -70vw;
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+  .characterWrapper {
+    position: relative;
+    background: transparent;
+  }
+
+  .characterWrapper svg {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 0px;
+  }
 }
